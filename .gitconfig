@@ -1,0 +1,7 @@
+[user]
+	name = Joe Johans
+	email = lgvichy@gmail.com
+[core]
+	editor = vim
+[push]
+	default = current
