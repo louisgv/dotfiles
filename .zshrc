@@ -96,7 +96,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-alias dotfile="/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 export PARITY_KOVAN="/media/jojo/LAB-4TB/Parity/Kovan"
 export PARITY_FOUNDATION="/media/jojo/LAB-4TB/Parity/Foundation"
