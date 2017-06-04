@@ -1,0 +1,21 @@
+# This config should be placed in following path:
+#   ~/.local/share/io.parity.ethereum/config.toml
+
+[parity]
+# Blockchain and settings will be stored in /media/jojo/LAB-4TB/Parity/Foundation.
+base_path = "/media/jojo/LAB-4TB/Parity/Foundation"
+
+[ui]
+# Wallet will be accessible on port 9180.
+port = 9180
+
+[rpc]
+# JSON-RPC over HTTP will be accessible on port 9545.
+port = 9545
+
+[network]
+port = 40303
+
+[dapps]
+port = 9080
+

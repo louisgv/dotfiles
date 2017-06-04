@@ -1,0 +1,18 @@
+#!/bin/bash
+
+bbsOutput="$(tail /proc/acpi/bbswitch)"
+
+cardState="${bbsOutput: -3}"
+
+
+
+case $cardState in
+OFF)
+	sudo tee /proc/acpi/bbswitch <<< ON
+	;;
+*)
+	sudo tee /proc/acpi/bbswitch <<< OFF
+	;;
+esac
+
+

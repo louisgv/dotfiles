@@ -1,0 +1,3 @@
+#!/bin/bash
+
+parity --config "$HOME/bin/parity/kovan-config.toml"
