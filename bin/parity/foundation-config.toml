@@ -18,4 +18,6 @@ port = 40303
 
 [dapps]
 port = 9080
-
+interface = "local"
+hosts = ["none"]
+path = "/media/jojo/IvyMike/Parity/Dapps"

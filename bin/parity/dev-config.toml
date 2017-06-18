@@ -3,14 +3,14 @@
 
 [parity]
 # Kovan Test Network
-chain = "kovan"
+chain = "$HOME/bin/parity/dev-chain.json"
 # Blockchain and settings will be stored in /media/jojo/LAB-4TB/Parity/Kovan.
 # base_path = "/media/jojo/LAB-4TB/Parity/Kovan"
-base_path = "/media/jojo/IvyMike/Parity/Kovan"
+base_path = "/media/jojo/IvyMike/Parity/Dev"
 
 [dapps]
 disable = false
 port = 8080
 interface = "local"
 hosts = ["none"]
-pathi = "/media/jojo/IvyMike/Parity/Dapps"
+path = "/media/jojo/IvyMike/Parity/Dapps"
