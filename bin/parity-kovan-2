@@ -1,0 +1,13 @@
+#!/bin/bash
+
+configPath="$HOME/bin/parity/kovan-config-2.toml"
+
+case $1 in
+token)
+	parity signer new-token --config "${configPath}" | tail -1 | xclip -selection clipboard
+	;;
+*)
+	parity --config "${configPath}"
+	;;
+esac
+

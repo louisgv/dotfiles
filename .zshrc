@@ -89,14 +89,23 @@ export NVM_DIR="/home/jojo/.nvm"
 
 DEFAULT_USER=jojo
 
+export DRIVE_LAB="/media/jojo/IvyMike/"
+
 # Android
-export ANDROID_HOME="/media/jojo/LAB-4TB/Linux/Android/Sdk"
+export ANDROID_HOME="$DRIVE_LAB/Linux/Android/Sdk"
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+function dotfiles() { 
+	git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
+}
 
-export PARITY_KOVAN="/media/jojo/LAB-4TB/Parity/Kovan"
-export PARITY_FOUNDATION="/media/jojo/LAB-4TB/Parity/Foundation"
+export PARITY_KOVAN="$DRIVE_LAB/Parity/Kovan"
+export PARITY_FOUNDATION="$DRIVE_LAB/Parity/Foundation"
+
+source '/usr/local/bin/virtualenvwrapper.sh'
+
+function s(){ song "$@" > /dev/null 2>&1  &; }
+source /opt/ros/kinetic/setup.zsh
