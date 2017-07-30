@@ -1,0 +1,75 @@
+"*":
+  "atom-beautify":
+    cpp:
+      configPath: "/home/jojo/.config/uncrustify.cfg"
+    executables:
+      uncrustify:
+        path: "/home/jojo/src/uncrustify/build/uncrustify"
+    general:
+      _analyticsUserId: "4f0db0b7-b30b-4b21-9f75-996712442ac4"
+      muteUnsupportedLanguageErrors: true
+    js:
+      break_chained_methods: true
+      indent_with_tabs: true
+      jslint_happy: true
+      keep_array_indentation: true
+      keep_function_indentation: true
+      max_preserve_newlines: 1
+      space_before_conditional: false
+    jsx:
+      break_chained_methods: true
+      default_beautifier: "JS Beautify"
+      indent_with_tabs: true
+      jslint_happy: true
+      keep_array_indentation: true
+      keep_function_indentation: true
+      space_before_conditional: false
+      unescape_strings: true
+  "atom-material-ui":
+    colors:
+      abaseColor: "#d0000b"
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: false
+    ui:
+      panelContrast: true
+  core:
+    allowPendingPaneItems: false
+    autoHideMenuBar: true
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "deprecation-cop"
+      "about"
+      "welcome"
+      "github"
+      "language-javascript-jsx"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "bronokai"
+    ]
+    warnOnLargeFileLimit: 1
+  editor:
+    scrollPastEnd: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    tabType: "hard"
+  "exception-reporting":
+    userId: "b530edb4-0b5c-ddd6-9e2f-06ed0ddff858"
+  "file-icons":
+    forceShow: true
+    strategies:
+      modelines: false
+  "go-debug":
+    dlvPath: "/home/jojo/.gvm/pkgsets/go1.8.3/global/bin/dlv"
+    saveAllFiles: true
+  "go-plus":
+    panel:
+      currentHeight: "29.555555555555557vh"
+  "linter-ui-default":
+    panelHeight: 81
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
