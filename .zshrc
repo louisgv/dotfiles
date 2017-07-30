@@ -109,3 +109,5 @@ source '/usr/local/bin/virtualenvwrapper.sh'
 
 function s(){ song "$@" > /dev/null 2>&1  &; }
 source /opt/ros/kinetic/setup.zsh
+
+[[ -s "/home/jojo/.gvm/scripts/gvm" ]] && source "/home/jojo/.gvm/scripts/gvm"
