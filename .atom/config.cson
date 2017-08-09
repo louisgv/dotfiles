@@ -70,6 +70,7 @@
       currentHeight: "29.555555555555557vh"
   "linter-ui-default":
     panelHeight: 81
+    showPanel: true
   "tree-view": {}
   welcome:
     showOnStartup: false

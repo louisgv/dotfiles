@@ -53,8 +53,6 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux nvm node ssh-agent zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -96,6 +94,9 @@ export ANDROID_HOME="$DRIVE_LAB/Linux/Android/Sdk"
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
+# Atom
+export PATH=${PATH}:${HOME}/bin/atom/bin
+
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 function dotfiles() { 
@@ -105,9 +106,12 @@ function dotfiles() {
 export PARITY_KOVAN="$DRIVE_LAB/Parity/Kovan"
 export PARITY_FOUNDATION="$DRIVE_LAB/Parity/Foundation"
 
+export VIRTUALENVWRAPPER_PYTHON=`which python3`
 source '/usr/local/bin/virtualenvwrapper.sh'
 
 function s(){ song "$@" > /dev/null 2>&1  &; }
 source /opt/ros/kinetic/setup.zsh
 
 [[ -s "/home/jojo/.gvm/scripts/gvm" ]] && source "/home/jojo/.gvm/scripts/gvm"
+
+source $ZSH/oh-my-zsh.sh
