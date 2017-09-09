@@ -17,7 +17,7 @@ port = 20202
 [rpc]
 port = 7545
 
-[jsonrpc]
+[websockets]
 port = 7080
 interface = "local"
 hosts = ["none"]

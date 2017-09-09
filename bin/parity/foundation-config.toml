@@ -16,7 +16,7 @@ port = 9545
 [network]
 port = 40303
 
-[jsonrpc]
+[websockets]
 port = 9080
 interface = "local"
 hosts = ["none"]
