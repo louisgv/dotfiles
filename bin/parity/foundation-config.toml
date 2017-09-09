@@ -16,8 +16,10 @@ port = 9545
 [network]
 port = 40303
 
-[dapps]
+[jsonrpc]
 port = 9080
 interface = "local"
 hosts = ["none"]
+
+[dapps]
 path = "/media/jojo/IvyMike/Parity/Dapps"

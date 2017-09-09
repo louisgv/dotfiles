@@ -8,10 +8,12 @@ chain = "kovan"
 # base_path = "/media/jojo/LAB-4TB/Parity/Kovan"
 base_path = "/media/jojo/IvyMike/Parity/Kovan"
 
-[dapps]
-disable = false
+[jsonrpc]
 port = 8080
 interface = "local"
 hosts = ["none"]
+
+[dapps]
+disable = false
 path = "/media/jojo/IvyMike/Parity/Dapps"
 

@@ -17,11 +17,11 @@ port = 20202
 [rpc]
 port = 7545
 
-
-[dapps]
-disable = false
+[jsonrpc]
 port = 7080
 interface = "local"
 hosts = ["none"]
-path = "/media/jojo/IvyMike/Parity/Dapps"
 
+[dapps]
+disable = false
+path = "/media/jojo/IvyMike/Parity/Dapps"

@@ -44,6 +44,15 @@
       "welcome"
       "github"
       "language-javascript-jsx"
+      "autocomplete-clang"
+      "autocomplete-solidity"
+      "busy-signal"
+      "go-debug"
+      "go-plus"
+      "go-signature-statusbar"
+      "language-cmake"
+      "language-r"
+      "tasks"
     ]
     telemetryConsent: "no"
     themes: [
@@ -52,6 +61,8 @@
     ]
     warnOnLargeFileLimit: 1
   editor:
+    fontSize: 15
+    preferredLineLength: 108
     scrollPastEnd: true
     softWrap: true
     softWrapAtPreferredLineLength: true
@@ -71,6 +82,7 @@
   "linter-ui-default":
     panelHeight: 81
     showPanel: true
-  "tree-view": {}
+  "tree-view":
+    focusOnReveal: false
   welcome:
     showOnStartup: false
