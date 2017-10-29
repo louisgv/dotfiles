@@ -97,11 +97,16 @@ export PATH=$PATH:~/src/racket/bin
 # Github
 # alias git=hub
 
+# PyEnv
+export PATH=$PATH:~/.pyenv/bin:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # export PATH=$PATH:/usr/local/go/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -128,7 +133,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias rn="react-native"
+
 
 # case $- in *i*)
 #  if [ -z "$TMUX" ]; then exec tmux; fi;;
@@ -136,3 +141,12 @@ alias rn="react-native"
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+function s(){ song "$@" > /dev/null 2>&1  &; }
+export VIRTUALENVWRAPPER_PYTHON=/home/lab/.pyenv/shims/python3
+source '/home/lab/.pyenv/versions/3.6.2/bin/virtualenvwrapper.sh'
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+
+source $ZSH/oh-my-zsh.sh
