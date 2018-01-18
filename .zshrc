@@ -2,12 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/jojo/.oh-my-zsh
+export ZSH=/home/jojo/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+
+ZSH_THEME="takashiyoshida"
+# ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +53,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux nvm node ssh-agent zsh-syntax-highlighting)
+plugins=(git tmux nvm node zsh-syntax-highlighting ssh-agent)
 
 # User configuration
 
@@ -106,12 +108,24 @@ function dotfiles() {
 export PARITY_KOVAN="$DRIVE_LAB/Parity/Kovan"
 export PARITY_FOUNDATION="$DRIVE_LAB/Parity/Foundation"
 
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 export VIRTUALENVWRAPPER_PYTHON=`which python3`
 source '/usr/local/bin/virtualenvwrapper.sh'
 
 function s(){ song "$@" > /dev/null 2>&1  &; }
-source /opt/ros/kinetic/setup.zsh
 
-[[ -s "/home/jojo/.gvm/scripts/gvm" ]] && source "/home/jojo/.gvm/scripts/gvm"
+source "/opt/ros/lunar/setup.zsh"
+
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+# LUNA
+
+export LUNA_SRC="$DRIVE_LAB/src/luna/luna-core"
+export LUNA_HOME="$LUNA_SRC/stdlib"
+export PATH="$LUNA_SRC/dist/bin/public/luna:$PATH"
+
 
 source $ZSH/oh-my-zsh.sh

@@ -7,24 +7,29 @@
         path: "/home/jojo/src/uncrustify/build/uncrustify"
     general:
       _analyticsUserId: "4f0db0b7-b30b-4b21-9f75-996712442ac4"
+      beautifyEntireFileOnSave: false
       muteUnsupportedLanguageErrors: true
+    html:
+      wrap_attributes: "force-aligned"
     js:
       break_chained_methods: true
-      indent_with_tabs: true
+      default_beautifier: "ESLint Fixer"
       jslint_happy: true
       keep_array_indentation: true
       keep_function_indentation: true
       max_preserve_newlines: 1
       space_before_conditional: false
     jsx:
-      break_chained_methods: true
-      default_beautifier: "JS Beautify"
-      indent_with_tabs: true
+      e4x: false
       jslint_happy: true
       keep_array_indentation: true
       keep_function_indentation: true
       space_before_conditional: false
-      unescape_strings: true
+    latex:
+      always_look_for_split_brackets: true
+      remove_trailing_whitespace: true
+    vue:
+      keep_function_indentation: true
   "atom-material-ui":
     colors:
       abaseColor: "#d0000b"
@@ -34,6 +39,8 @@
       compactList: false
     ui:
       panelContrast: true
+  "autocomplete-solidity":
+    shorthandOnly: false
   core:
     allowPendingPaneItems: false
     autoHideMenuBar: true
@@ -45,14 +52,14 @@
       "github"
       "language-javascript-jsx"
       "autocomplete-clang"
-      "autocomplete-solidity"
       "busy-signal"
       "go-debug"
       "go-plus"
       "go-signature-statusbar"
-      "language-cmake"
       "language-r"
       "tasks"
+      "w3c-validation"
+      "atom-latex"
     ]
     telemetryConsent: "no"
     themes: [
@@ -61,12 +68,13 @@
     ]
     warnOnLargeFileLimit: 1
   editor:
-    fontSize: 15
     preferredLineLength: 108
     scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
-    tabType: "hard"
+    tabLength: 4
   "exception-reporting":
     userId: "b530edb4-0b5c-ddd6-9e2f-06ed0ddff858"
   "file-icons":
@@ -79,10 +87,18 @@
   "go-plus":
     panel:
       currentHeight: "29.555555555555557vh"
+  "language-babel":
+    emmetCSSAutocomplete: true
   "linter-ui-default":
-    panelHeight: 81
+    panelHeight: 296
     showPanel: true
+  pigments:
+    extendAutocompleteToColorValue: true
+    extendAutocompleteToVariables: true
   "tree-view":
     focusOnReveal: false
   welcome:
     showOnStartup: false
+".js.jsx.source":
+  editor:
+    showIndentGuide: true

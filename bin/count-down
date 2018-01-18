@@ -87,4 +87,4 @@ while [ $sec_rem -gt 0 ]; do
 done
 printf "\n"
 
-figlet "HAPPY NEW YEARS" | lolcat -a -d 500
+figlet "Ayyyyyyyyyyyyyyyy LMAO HAPPY NEW YEARS FOLKS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" | lolcat -a
