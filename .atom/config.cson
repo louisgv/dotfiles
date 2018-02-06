@@ -68,6 +68,7 @@
     ]
     warnOnLargeFileLimit: 1
   editor:
+    fontSize: 13
     preferredLineLength: 108
     scrollPastEnd: true
     showIndentGuide: true

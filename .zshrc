@@ -89,7 +89,7 @@ export NVM_DIR="/home/jojo/.nvm"
 
 DEFAULT_USER=jojo
 
-export DRIVE_LAB="/media/jojo/IvyMike/"
+export DRIVE_LAB="/media/jojo/IvyMike"
 
 # Android
 export ANDROID_HOME="$DRIVE_LAB/Linux/Android/Sdk"
@@ -123,9 +123,14 @@ source "/opt/ros/lunar/setup.zsh"
 
 # LUNA
 
-export LUNA_SRC="$DRIVE_LAB/src/luna/luna-core"
-export LUNA_HOME="$LUNA_SRC/stdlib"
-export PATH="$LUNA_SRC/dist/bin/public/luna:$PATH"
+export LUNA_SRC="$DRIVE_LAB/src/luna"
+export LUNA_CORE="$LUNA_SRC/luna-core"
+export LUNA_MANAGER="$LUNA_SRC/luna-manager"
 
+export LUNA_HOME="$LUNA_CORE/stdlib"
+
+export PATH="$LUNA_CORE/dist/bin/public/luna::$LUNA_MANAGER/executables:$PATH"
 
 source $ZSH/oh-my-zsh.sh
+
+export PATH=/home/jojo/.local/bin:$PATH
