@@ -13,12 +13,12 @@
       wrap_attributes: "force-aligned"
     js:
       break_chained_methods: true
-      default_beautifier: "ESLint Fixer"
+      default_beautifier: "Pretty Diff"
       jslint_happy: true
       keep_array_indentation: true
       keep_function_indentation: true
-      max_preserve_newlines: 1
       space_before_conditional: false
+      wrap_line_length: 90
     jsx:
       e4x: false
       jslint_happy: true
@@ -68,7 +68,6 @@
     ]
     warnOnLargeFileLimit: 1
   editor:
-    fontSize: 13
     preferredLineLength: 108
     scrollPastEnd: true
     showIndentGuide: true

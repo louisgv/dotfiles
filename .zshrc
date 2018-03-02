@@ -133,4 +133,5 @@ export PATH="$LUNA_CORE/dist/bin/public/luna::$LUNA_MANAGER/executables:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
+export PATH=/media/jojo/Valhalla/Unreal/UnrealEngine/Engine/Binaries/Linux:$PATH
 export PATH=/home/jojo/.local/bin:$PATH
