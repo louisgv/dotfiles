@@ -101,7 +101,7 @@ export PATH=${PATH}:${HOME}/bin/atom/bin
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-function dotfiles() { 
+function dotfiles() {
 	git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
 }
 
@@ -135,3 +135,8 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=/media/jojo/Valhalla/Unreal/UnrealEngine/Engine/Binaries/Linux:$PATH
 export PATH=/home/jojo/.local/bin:$PATH
+export PATH=$PATH:/home/jojo/bin/helix-p4v/bin
+
+source $HOME/.credentials
+
+

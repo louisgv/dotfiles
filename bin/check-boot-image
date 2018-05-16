@@ -1,0 +1,6 @@
+#!/bin/sh
+sudo dpkg --list 'linux-image*'|awk '{ if ($1=="ii") print $2}'|grep -v `uname -r`
+
+# Then use sudo apt purge to nuke the obsolete images.
+# Example: sudo apt purge linux-image-4.13.0-31-generic linux-image-4.13.0-32-generic
+

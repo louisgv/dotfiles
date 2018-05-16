@@ -32,13 +32,16 @@
       keep_function_indentation: true
   "atom-material-ui":
     colors:
-      abaseColor: "#d0000b"
+      abaseColor: "#aad875"
+      accentColor: "#6f8853"
+      predefinedColor: "Green"
     tabs:
       compactTabs: true
     treeView:
-      compactList: false
+      compactList: true
     ui:
       panelContrast: true
+      useAnimations: false
   "autocomplete-solidity":
     shorthandOnly: false
   core:
@@ -68,7 +71,8 @@
     ]
     warnOnLargeFileLimit: 1
   editor:
-    preferredLineLength: 108
+    fontSize: 15
+    preferredLineLength: 90
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
@@ -89,6 +93,10 @@
       currentHeight: "29.555555555555557vh"
   "language-babel":
     emmetCSSAutocomplete: true
+  linter:
+    disabledProviders: [
+      "Solhint"
+    ]
   "linter-ui-default":
     panelHeight: 296
     showPanel: true
@@ -99,6 +107,10 @@
     focusOnReveal: false
   welcome:
     showOnStartup: false
+".babel.regexp.source":
+  editor:
+    softWrapAtPreferredLineLength: true
 ".js.jsx.source":
   editor:
     showIndentGuide: true
+    softWrap: true

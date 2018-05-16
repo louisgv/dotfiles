@@ -1,0 +1,2 @@
+#!/bin/bash
+/media/jojo/IvyMike/src/vscode/scripts/code.sh "$@" 2>/dev/null &
