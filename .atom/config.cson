@@ -71,7 +71,7 @@
     ]
     warnOnLargeFileLimit: 1
   editor:
-    fontSize: 15
+    fontSize: 17
     preferredLineLength: 90
     scrollPastEnd: true
     showIndentGuide: true
@@ -99,7 +99,6 @@
     ]
   "linter-ui-default":
     panelHeight: 296
-    showPanel: true
   pigments:
     extendAutocompleteToColorValue: true
     extendAutocompleteToVariables: true

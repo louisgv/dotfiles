@@ -1,0 +1,56 @@
+#!/bin/zsh
+
+WORKSPACEPATH=${1:-"/media/jojo/IvyMike/pro/roshub/roshub_backend"}
+
+cd $WORKSPACEPATH
+
+tmux rename-session rhdev
+tmux rename-window -t rhdev:0 'main'
+
+# First pane source ros and run websocket
+tmux splitw -v -p 75 -t rhdev:0.0
+# Second pane run rest_server
+tmux splitw -v -p 66 -t rhdev:0.1
+
+# tmux split-window -v -p 50
+
+# Last pane for work
+tmux splitw -h -t rhdev:0.2
+
+# Forth
+tmux splitw -v -p 70 -t rhdev:0.3
+
+tmux splitw -v -p 50 -t rhdev:0.4
+
+# 0: websocket
+# 1: rest server
+# 3: mongodb
+# 4: example-client
+# 5: roshub-crypto
+#
+
+tmux send-keys -t rhdev:0.3 'mongod --dbpath ./data' Enter
+sleep 3
+tmux send-keys -t rhdev:0.2 'sudo snap restart vapor-master' Enter
+sleep 10
+
+# run websocket server
+tmux send-keys -t rhdev:0.0 "cd ${WORKSPACEPATH}" Enter
+tmux send-keys -t rhdev:0.0 'cd ros/dataparty_backend_ros' Enter
+tmux send-keys -t rhdev:0.0 'source devel/setup.zsh' Enter
+tmux send-keys -t rhdev:0.0 'cd ../../packages/websocket/' Enter
+tmux send-keys -t rhdev:0.0 'yarn watch' Enter
+
+# run rest server
+tmux send-keys -t rhdev:0.1 'cd packages/rest_server/' Enter
+tmux send-keys -t rhdev:0.1 'yarn watch' Enter
+
+tmux send-keys -t rhdev:0.5 'cd packages/roshub-crypto/' Enter
+tmux send-keys -t rhdev:0.5 'yarn watch' Enter
+
+tmux send-keys -t rhdev:0.4 'cd packages/example-client/' Enter
+tmux send-keys -t rhdev:0.4 'yarn watch' Enter
+
+done
+
+
